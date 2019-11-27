@@ -5,8 +5,8 @@ class DynamicArray
 {
 private:
 	Type* arr;
-	int len = 0;    // lenght user thinks the array is
-	int capcity = Size;   // Actual lenght
+	int len = 0;   
+	int capcity = Size;   
 
 public:
 	DynamicArray()
@@ -46,13 +46,13 @@ public:
 		if (len + 1 >= capcity)
 		{
 			if (capcity == 0) capcity = 1;
-			else capcity = capcity * 2;  //Doubling the size of the current array
+			else capcity = capcity * 2;  
 			Type* newArray = new Type[capcity];
 			for (int i = 0; i < len; i++) newArray[i] = arr[i];
 			arr = newArray; //new array is now linked
 		}
 
-		arr[len] = value; //value is added to the len+1 index
+		arr[len] = value; 
 		len = len + 1;
 	}
 
