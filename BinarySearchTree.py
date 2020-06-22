@@ -40,6 +40,7 @@ class BST(object):
                     return self.searchTool(start.right,find_val)
                 else:
                     return self.searchTool(start.left,find_val)
+        return False
     
 # Set up tree
 tree = BST(4)
